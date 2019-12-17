@@ -29,7 +29,7 @@ class LTI_Service_Connector {
                 "aud" => $this->registration->get_auth_server(),
                 "iat" => time() - 5,
                 "exp" => time() + 60,
-                "jti" => uniqid("lti-service-token")
+                "jti" => uniqid("lti-service-token", true)
         ];
 
         // Sign the JWT with our private key (given by the platform on registration)

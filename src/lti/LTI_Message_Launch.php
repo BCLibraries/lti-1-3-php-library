@@ -26,7 +26,7 @@ class LTI_Message_Launch {
     function __construct(Database $database, Cache $cache = null, Cookie $cookie = null) {
         $this->db = $database;
 
-        $this->launch_id = uniqid("lti1p3_launch_");
+        $this->launch_id = uniqid("lti1p3_launch_", true);
 
         if ($cache === null) {
             $cache = new Cache();
